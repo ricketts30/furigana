@@ -4,6 +4,8 @@
 // q.v.: https://learn.jquery.com/plugins/basic-plugin-creation/
 
 $.fn.furigana = function() {
-    this.css( "color", "green" );
+    // in the first version we only highlight ruby sections
+    this.find("ruby").css("color","green");
+    this.find("rt").css("color","red");
     return this;
 }
