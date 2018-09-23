@@ -9,7 +9,13 @@
         <script type="text/javascript">
         
         $( document ).ready(function() {
+            $.fn.furigana.defaults.rt_color = "blue";
             $(".demo").furigana();    
+            $(".demoSenryu")
+                .furigana({
+                    rt_color: "white",
+                    rt_backgroundColor: "silver"
+                });   
         });
 
         </script>
@@ -57,6 +63,7 @@
         <section class="demo">
             <div class="fg-control"></div>
             <h1>Demonstration</h1>
+            <pre>$(".demo").furigana();</pre>
             <p>
                 <ruby>
                     漢 <rp>(</rp><rt>かん</rt><rp>)</rp>
@@ -68,10 +75,13 @@
                 so I hope to include some magnification featues in this plugin.
             </p>
         </section>  
-        <section class="demo">
+        <section class="demoSenryu">
                 <div class="fg-control"></div>
                 <h1>Demo: Senryū</h1>
-
+                <pre>$(".demoSenryu").furigana({
+    rt_color: "white",
+    rt_backgroundColor: "silver"
+});</pre>
                 <p>
                         <ruby>
                             漢 <rp>(</rp><rt>どろ</rt><rp>)</rp>
