@@ -9,12 +9,12 @@
         <script type="text/javascript">
         
         $( document ).ready(function() {
-            $.fn.furigana.defaults.rt_color = "blue";
+            $.fn.furigana.defaults.color = "blue";
             $(".demo").furigana();    
             $(".demoSenryu")
                 .furigana({
-                    rt_color: "white",
-                    rt_backgroundColor: "silver"
+                    color: "white",
+                    backgroundColor: "blue"
                 });   
         });
 
@@ -76,38 +76,67 @@
             </p>
         </section>  
         <section class="demoSenryu">
-                <div class="fg-control"></div>
-                <h1>Demo: Senryū</h1>
-                <pre>$(".demoSenryu").furigana({
-    rt_color: "white",
-    rt_backgroundColor: "silver"
+            <div class="fg-control"></div>
+            <h1>Demo: Senryū</h1>
+            <pre>$(".demoSenryu").furigana({
+    color: "white",
+    backgroundColor: "blue"
 });</pre>
-                <p>
-                        <ruby>
-                            漢 <rp>(</rp><rt>どろ</rt><rp>)</rp>
-                            棒 <rp>(</rp><rt>ぼう</rt><rp>)</rp>
-                            を
-                        </ruby>
-                </p>
-                <p>
-                    <ruby>
-                        捕 <rp>(</rp><rt>とら</rt><rp>)</rp>
-                        えてみれば
-                    </ruby>
-                    
-                </p>
-                <p>
-                    <ruby>
-                        我 <rp>(</rp><rt>わ</rt><rp>)</rp>
-                        が
-                    </ruby>
-                    <ruby>
-                        子 <rp>(</rp><rt>こ</rt><rp>)</rp>
-                        なり
-                    </ruby>
-                </p>
-                <p><em>Senryū Karai (1718–1790)</em></p>                
-            </section>   
+            <p>
+                <ruby>
+                    漢 <rp>(</rp><rt>どろ</rt><rp>)</rp>
+                    棒 <rp>(</rp><rt>ぼう</rt><rp>)</rp>
+                    を
+                </ruby>
+            </p>
+            <p>
+                <ruby>
+                    捕 <rp>(</rp><rt>とら</rt><rp>)</rp>
+                    えてみれば
+                </ruby>
+                
+            </p>
+            <p>
+                <ruby>
+                    我 <rp>(</rp><rt>わ</rt><rp>)</rp>
+                    が
+                </ruby>
+                <ruby>
+                    子 <rp>(</rp><rt>こ</rt><rp>)</rp>
+                    なり
+                </ruby>
+            </p>
+            <p><em>Senryū Karai (1718–1790)</em></p>                
+        </section>  
+        <section>
+            <h1>Demo: Levels</h1>
+            <p>
+                <ruby>
+                    000<rp>(</rp><rt rt-lvl="0">zero</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    001<rp>(</rp><rt rt-lvl="1">one</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    002<rp>(</rp><rt rt-lvl="2">two</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    003<rp>(</rp><rt rt-lvl="3">three</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    004<rp>(</rp><rt rt-lvl="4">four</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    005<rp>(</rp><rt rt-lvl="5">five</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    006<rp>(</rp><rt rt-lvl="6">six</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    007<rp>(</rp><rt rt-lvl="7">seven</rt><rp>)</rp>
+                </ruby>
+            </p>
+        </section> 
         <section>
             <h1>References</h1>
             <ul>
