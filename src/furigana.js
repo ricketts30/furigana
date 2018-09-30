@@ -1,4 +1,4 @@
-// filename: furigata.js
+// filename: furigana.js
 // dependecoes: jQuery (v ??? or higher)
 
 // q.v.: https://learn.jquery.com/plugins/basic-plugin-creation/
@@ -29,6 +29,38 @@ jQuery.fn.furigana.defaults = {
     hide_level: 0,
     obscure_level: 1
 };
+
+jQuery.fn.furigana.filter = function(list, from, before){
+    var retVal = [], counter = 0, size = -1, number = 0;
+    if(list){
+        size = list.length;
+    }
+    //console.log(`size: ${size}`);
+    for(counter = 0; counter < size; counter++){
+        number = list[counter];
+        //console.log(`number: ${number}`);
+        // note: if from == before then no number is valid!
+        if(from && before){
+            if(from < before){
+                if(from <= number && before > number){
+                    retVal.push(number);
+                }
+            }else if(from > before){
+                if(from <= number || before > number){
+                    retVal.push(number);
+                }
+            }
+        }else if(from && number >= from){
+            retVal.push(number);
+        }else if(before && number < before){
+            retVal.push(number);
+        }else if(!from && !before){
+            // if no from or before value is specified then select everything
+            retVal.push(number);
+        }
+    }
+    return retVal;
+}; 
 
 /* todo: other attributes
 obscure_color: (default to silver)
