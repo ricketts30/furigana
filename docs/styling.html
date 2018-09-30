@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>furigana</title>
+        <link rel="stylesheet" href="./docs.css">
+        <script type="text/javascript" src="./jquery-3.3.1.min.js">/* just an import */</script>
+        <script type="text/javascript" src="./furigana.js">/* just an import */</script>
+        <script type="text/javascript">
+        
+        $(document).ready(function() {
+
+            $(".clickBoth rt").click(function(event) {
+                alert($(this).text());
+                event.stopImmediatePropagation();
+            });
+
+            $(".clickBoth ruby").click(function(event) {
+                alert($(this).html());
+                var figment = $("<ruby>" + $(this).html() + "</ruby>")
+                figment.find("rp").remove();
+                figment.find("rt").remove();
+                alert(figment.text());
+                event.stopImmediatePropagation();
+            });
+
+        });
+
+        </script>
+        <style>
+
+            .noStyle {
+                font-size: xx-large;
+                background-color: cornsilk;
+            }
+
+            .rubyStyle {
+                font-size: xx-large;
+                background-color: cornsilk;
+                color: navy;
+            }
+
+            .rubyDoubleStyle {
+                font-size: xx-large;
+                background-color: cornsilk;
+                color: navy;
+            }
+
+            .rubyDoubleStyle ruby {
+                background-color: darkgreen;
+                color: white;
+            }
+
+            .rubyDoubleStyle rt {
+                background-color: paleturquoise;
+                color: red;
+            }
+
+            .rubyStyleRubyTextHidden {
+                font-size: xx-large;
+                background-color: cornsilk;
+                color: navy;
+            }
+
+            .rubyStyleRubyTextHidden rt {
+                visibility: hidden;
+            }
+
+            .clickBoth {
+                font-size: xx-large;
+                background-color: cornsilk;
+                color: black;
+            }
+
+            .clickBoth ruby {
+                cursor: zoom-in;
+            }
+
+            .clickBoth rt {
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>CSS styling examples</h1>
+        <p>This page just shows the basic CSS styling options.</p>
+        <p><a href="./index.html">back to furigana</a></p>
+        <section>
+            <h1>Basic CSS Styling</h1>
+            <section>
+                <h1>No Styling </h1>
+                <p class="noStyle">
+                    <ruby>鶏<rp>(</rp><rt>にわとり</rt><rp>)</rp></ruby>
+                </p>
+                <h1>No Styling (no ruby element)</h1>
+                <p class="noStyle">
+                    鶏
+                </p>
+                <h1>No Styling (no ruby text)</h1>
+                <p class="noStyle">
+                        <ruby>鶏</ruby>
+                </p>
+                <h1>Ruby Styling</h1>
+                <p class="rubyStyle">
+                    <ruby>鶏<rp>(</rp><rt>にわとり</rt><rp>)</rp></ruby>
+                </p>
+                <h1>Ruby Double Styling</h1>
+                <p class="rubyDoubleStyle">
+                    <ruby>鶏<rp>(</rp><rt>にわとり</rt><rp>)</rp></ruby>
+                </p>
+                <h1>Ruby Styling (ruby text hidden)</h1>
+                <p class="rubyStyleRubyTextHidden">
+                    <ruby>鶏<rp>(</rp><rt>にわとり</rt><rp>)</rp></ruby>
+                </p>
+            </section>
+        </section>
+        <section>
+                <h1>Basic Click Events</h1>
+                <section>
+                    <h1>Click events</h1>
+                    <p class="clickBoth">
+                        <ruby>鶏<rp>(</rp><rt>にわとり</rt><rp>)</rp></ruby>
+                    </p>
+                </section>
+        </section>
+    
+    </body>
+</html> 
