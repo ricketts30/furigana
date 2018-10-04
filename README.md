@@ -12,7 +12,8 @@ Nothing Yet :(
 
 ### Doing List
 
-* Story 0008 - update documentation and website 
+* Story 0008 - update documentation and website
+* Story 0010 - settings: implement magnify_from, magnify_before  
 
 ### To Do List
 
