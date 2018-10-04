@@ -13,8 +13,6 @@
             $.fn.furigana.defaults,
              options);
 
-        
-        
         // formatting:
         this.find("rt").css("color", settings.color);
         this.find("rt").css("background-color", settings.backgroundColor);
