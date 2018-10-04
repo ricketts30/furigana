@@ -14,6 +14,7 @@ Nothing Yet :(
 
 * Story 0008 - update documentation and website
 * Story 0010 - settings: implement magnify_from, magnify_before  
+* Story 0011 - modify to write custom classes rather than concatenating css text  
 
 ### To Do List
 
