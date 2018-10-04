@@ -13,8 +13,6 @@ Nothing Yet :(
 ### Doing List
 
 * Story 0008 - update documentation and website 
-* Story 0009 - work on "magnify" feature
-
 
 ### To Do List
 
@@ -28,6 +26,6 @@ Nothing Yet :(
 * Story 0003 - find suitable texts for examples (Senryuu, Haiku, classic texts)
 * Story 0004 - define frequency attributes (&lt;rt rt-lvl="3"&gt;かん&lt;/rt&gt;) get  
 * Story 0006 - make options and config and styles available to developers
-
+* Story 0009 - work on "magnify" feature completed.
 
 
