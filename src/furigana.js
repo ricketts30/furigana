@@ -13,6 +13,8 @@
             $.fn.furigana.defaults,
              options);
 
+        
+        
         // formatting:
         this.find("rt").css("color", settings.color);
         this.find("rt").css("background-color", settings.backgroundColor);
@@ -29,7 +31,8 @@
                     cursor: settings.obscure_cursor, 
                     backgroundColor: settings.obscure_backgroundColor , 
                     color: settings.obscure_color 
-                }).on( "click", function() {
+                }).on( "click", function(event) {
+                        event.stopPropagation();
                         $( this ).css(
                             { 
                                 cursor: 'inherit', 
@@ -62,6 +65,28 @@
             });
         }
 
+        // magnifying:
+        // q.v.: http://jsfiddle.net/SRw67/
+        this.find("ruby").on( "click", function(event) {
+            event.stopPropagation();
+            let fragment = "<ruby>" + $(this).html() + "</ruby>";
+            let divFragment = $("<div style='z-index:50; position:absolute; border: " + settings.magnify_borderStyle + ";'><a>" + settings.magnify_close_text + "</a><br><span style='font-size: xx-large; padding: 10px;'>" + fragment + "</span></div>");
+            divFragment.find("a").on("click", function(event) {
+                $(this).closest("div").remove();
+            });
+            divFragment.css(
+                { 
+                    backgroundColor: settings.magnify_backgroundColor,
+                    marginLeft : event.pageX + "px"
+                });
+            divFragment.find("a").css(
+                { 
+                    color: settings.magnify_close_color, 
+                    cursor: settings.obscure_cursor
+                });
+            $(this).after(divFragment);
+        });
+
         return this;
     };
 
@@ -70,16 +95,21 @@
 jQuery.fn.furigana.defaults = {
     color: "inherit", 
     backgroundColor: "inherit", 
-    obscure_color: "silver", 
-    obscure_backgroundColor: "silver", 
-    hide_from: null,
     hide_before: null,
-    obscure_from: null,
+    hide_from: null,obscure_backgroundColor: "silver", 
     obscure_before: null,
+    obscure_color: "silver",
     obscure_cursor: 'pointer',
-    replace_from: null,
+    obscure_from: null,
+    magnify_backgroundColor: "cornsilk",
+    magnify_before: 10,
+    magnify_borderStyle: "1px dashed blue",
+    magnify_close_color: "red",
+    magnify_close_text: "[&bull;]",
+    magnify_from: 0,
+    number_list: [0,1,2,3,4,5,6,7,8,9],
     replace_before: null,
-    number_list: [0,1,2,3,4,5,6,7,8,9]
+    replace_from: null
 };
 
 jQuery.fn.furigana.filter = function(list, from, before){
@@ -114,12 +144,3 @@ jQuery.fn.furigana.filter = function(list, from, before){
     }
     return retVal;
 }; 
-
-/* todo: other attributes
-obscure_color: (default to silver)
-obscure_backgroundColor: (default to silver)
-hide_level: (default of zero, the level at which (and below) to hide furigana)
-obscure_level: (default of one, the level at which (and below) to obscure furigana)
-(note other levels above obscure would be shown)
-a <rt> without attributes or classes is considered to be level 1
-*/
