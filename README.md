@@ -12,8 +12,9 @@ Nothing Yet :(
 
 ### Doing List
 
-* Story 0004 - define frequency attributes (fg-frq-common, fg-frq-normal, fg-frq-rare) or (fg-lvl-1, fg-lvl-2) or (fg-lvl-low, fg-lvl-medium, fg-lbl-high, fg-lvl-advanced, fg-lvl-rare, fg-lvl-obscure, fg-lvl-archaic) 
-* Story 0006 - make options and config and styles available to developers
+* Story 0008 - update documentation and website 
+* Story 0009 - work on "magnify" feature
+
 
 ### To Do List
 
@@ -25,6 +26,8 @@ Nothing Yet :(
 * Story 0001 - started documentation (and git-hosted website)
 * Story 0002 - explore css styling options
 * Story 0003 - find suitable texts for examples (Senryuu, Haiku, classic texts)
+* Story 0004 - define frequency attributes (&lt;rt rt-lvl="3"&gt;かん&lt;/rt&gt;) get  
+* Story 0006 - make options and config and styles available to developers
 
 
 

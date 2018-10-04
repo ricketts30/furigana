@@ -15,6 +15,15 @@
                 .furigana({
                     color: "white",
                     backgroundColor: "blue"
+                }); 
+                $(".rubyLevels")
+                .furigana({
+                    hide_from: 2,
+                    hide_before: 4,
+                    obscure_from: 4,
+                    obscure_before: 6,
+                    replace_from: 7,
+                    replace_before: 9,
                 });   
         });
 
@@ -143,7 +152,7 @@
         </section>  
         <section>
             <h1>Demo: Levels</h1>
-            <p>
+            <p class="rubyLevels">
                 <ruby>
                     000<rp>(</rp><rt rt-lvl="0">zero</rt><rp>)</rp>
                 </ruby>
@@ -167,6 +176,12 @@
                 </ruby>
                 <ruby>
                     007<rp>(</rp><rt rt-lvl="7">seven</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    008<rp>(</rp><rt rt-lvl="8">eight</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    009<rp>(</rp><rt rt-lvl="9">nine</rt><rp>)</rp>
                 </ruby>
             </p>
         </section>

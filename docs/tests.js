@@ -64,3 +64,12 @@ QUnit.test( "filter list [0..11] from 5 and before 5 returns []", function( asse
     console.log(retVal);
     assert.ok( retVal.length == 0, "Passed!" );
 });
+
+QUnit.test( "filter list [0..11] from null and before null returns []", function( assert ) {
+    console.log("==filter list [0..11] from null and before null returns []==");
+    var retVal = jQuery.fn.furigana.filter(fg_filter_list, null, null);
+    console.log("retVal:");
+    console.log(retVal);
+    assert.ok( retVal.length == 0, "Passed!" );
+});
+
