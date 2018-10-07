@@ -5,3 +5,49 @@ body{
 h1 { 
     color: navy;
 }
+
+pre {
+	margin: 5px;
+	padding: 5px;
+	border: 1px #000000 dashed;
+	background-color: #F8F8F8;
+}
+
+span.tick {
+	color: green;
+}
+
+.demo {
+	border-left: 9px #888888 solid;
+	padding-left: 19px;
+}
+
+table.api {
+	border: 1px black solid;
+	border-collapse: collapse;
+}
+
+table.api th {
+	border: 1px black solid;
+	border-collapse: collapse;
+}
+
+table.api td {
+	border: 1px black solid;
+	border-collapse: collapse;
+}
+
+table.ranges {
+	border: 1px silver dashed;
+	border-collapse: collapse;
+}
+
+table.ranges th {
+	border: 1px silver dashed;
+	border-collapse: collapse;
+}
+
+table.ranges td {
+	border: 1px silver dashed;
+	border-collapse: collapse;
+}

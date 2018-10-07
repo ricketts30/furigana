@@ -24,135 +24,28 @@
                     obscure_before: 6,
                     replace_from: 7,
                     replace_before: 9,
+                }); 
+                $(".rubyLevelDemo")
+                .furigana({
+                    hide_from: 2,
+                    hide_before: 4,
+                    obscure_from: 4,
+                    obscure_before: 6,
+                    replace_from: 7,
+                    replace_before: 9,
                 });   
         });
-
         </script>
     </head>
     <body>
         <h1>furigana</h1>
         <p>A small jQuery plugin for furigana and the <code>&lt;ruby&gt;</code> HTML element.</p>
         <p>The project is hosted at <a href="https://github.com/ricketts30/furigana">https://github.com/ricketts30/furigana</a></p>
+        
         <section>
-            <h1>The <code>ruby</code> Element</h1>
-            <p>The basic <code>&lt;ruby&gt;</code> HTML element is used to provide additional meaning
-            to a piece of inline text.</p>
-            <p>This is predominatly used to give a translation of a foreign script 
-            (e.g. <ruby>明日<rp>(</rp><rt>Ashita</rt><rp>)</rp></ruby>)
-            or to signify the reading of a character where there are several valid options. 
-            </p>
-            <p>In this japanese word the second character is pronounced "ji" and means 'written character': 
-                <ruby>
-                    漢 <rp>(</rp><rt>かん</rt><rp>)</rp>
-                    字 <rp>(</rp><rt>じ</rt><rp>)</rp>
-                </ruby>
-            </p>
-            <p>
-                however that character has another readings (and pronounciation) and so furigana 
-                are sometimes required to differentiate meanings (if it is not clearly obvious from context):
-                <ul>
-                    <li>
-                            <ruby>
-                                大 <rp>(</rp><rt>おお</rt><rp>)</rp>
-                                字 <rp>(</rp><rt>あざ</rt><rp>)</rp>
-                            </ruby> pronounced "ooaza" and means 'large section of village'
-                    </li>
-                    <li>
-                            <ruby>
-                                大 <rp>(</rp><rt>おお</rt><rp>)</rp>
-                                字 <rp>(</rp><rt>じ</rt><rp>)</rp>
-                            </ruby> pronounced "ooji" and means 'large written character'
-                    </li>
-                </ul>
-            </p>
-            <p>This can also be used to unpack the meaning of an acronym like 
-                <ruby>PRN<rp>(</rp><rt>Pro Re Nata</rt><rp>)</rp></ruby>
-            </p>
-            <h1>Why Japanese needs Kanji</h1>
-                <p>You may be wondering; "If Kanji are so confusing then why use them at all?".</p>
-                <p>Traditionally Japanese is written without spaces between the words.  The combination of Kanji followed by particles helps to show where one word ends and another begins.</p>
-                <p>The following means: "Plums and also Peaches are both members of the Peach family".  When written in hiragana only it is not very comprehensible.</p>
-                <p>すもももももももものうち。</p>
-                <p>When written in Kanji it is much more easily comprehendible.</p>
-                <p>
-                    <ruby>李<rp>(</rp><rt>すもも</rt><rp>)</rp></ruby>
-                    も
-                    <ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>
-                    も
-                    <ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>
-                    のうち。
-                </p>
-                <p>In fact there is an even longer version: </p>
-                <p>すももももも、ももももも、すもももももももものうち。</p>
-                <p>
-                    <ruby>李<rp>(</rp><rt>すもも</rt><rp>)</rp></ruby>
-                    も
-                    <ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>
-                    、
-                    <ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>
-                    も
-                    <ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>
-                    、
-                    <ruby>李<rp>(</rp><rt>すもも</rt><rp>)</rp></ruby>
-                    も
-                    <ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>
-                    も
-                    <ruby>桃<rp>(</rp><rt>もも</rt><rp>)</rp></ruby>
-                    のうち。
-                </p>
-                <p><i>Plums are Peaches, Peaches are Peaches, both Plums and Peaches are members of the Peach family.</i></p>
-        </section>
-        <section class="demo">
-            <div class="fg-control"></div>
-            <h1>Demonstration</h1>
-            <pre>$(".demo").furigana();</pre>
-            <p>
-                <ruby>
-                    漢 <rp>(</rp><rt>かん</rt><rp>)</rp>
-                    字 <rp>(</rp><rt>じ</rt><rp>)</rp>
-                </ruby>
-            </p>
-            <p>
-                You can see that an issue with ruby text is that it is pretty small and hard-to-read, 
-                so I hope to include some magnification featues in this plugin.
-            </p>
-        </section>  
-        <section class="demoSenryu">
-            <div class="fg-control"></div>
-            <h1>Demo: Senryū</h1>
-            <pre>$(".demoSenryu").furigana({
-    color: "white",
-    backgroundColor: "blue"
-});</pre>
-            <p>
-                <ruby>
-                    漢 <rp>(</rp><rt>どろ</rt><rp>)</rp>
-                    棒 <rp>(</rp><rt>ぼう</rt><rp>)</rp>
-                    を
-                </ruby>
-            </p>
-            <p>
-                <ruby>
-                    捕 <rp>(</rp><rt>とら</rt><rp>)</rp>
-                    えてみれば
-                </ruby>
-                
-            </p>
-            <p>
-                <ruby>
-                    我 <rp>(</rp><rt>わ</rt><rp>)</rp>
-                    が
-                </ruby>
-                <ruby>
-                    子 <rp>(</rp><rt>こ</rt><rp>)</rp>
-                    なり
-                </ruby>
-            </p>
-            <p><em>Senryū Karai (1718–1790)</em></p>                
-        </section>  
-        <section>
-            <h1>Demo: Levels</h1>
-            <p class="rubyLevels">
+        <h1>A Quick (non-Japanese) Example</h1>
+        <p>The following pseudo-text will demonstrate the features of the <b>furigana</b> jQuery library.</p>
+        <p class="rubyLevelNoAction demo">
                 <ruby>
                     000<rp>(</rp><rt rt-lvl="0">zero</rt><rp>)</rp>
                 </ruby>
@@ -184,12 +77,120 @@
                     009<rp>(</rp><rt rt-lvl="9">nine</rt><rp>)</rp>
                 </ruby>
             </p>
+            <p>This is using ten blocks of ruby elements, each with a ruby-text-level attribute (<b>rt-lvl</b>) that matches the number it displays:</p>
+            
+            <pre>&lt;ruby&gt;
+  000&lt;rp&gt;(&lt;/rp&gt;&lt;rt rt-lvl="0"&gt;zero&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;
+&lt;ruby&gt;
+  001&lt;rp&gt;(&lt;/rp&gt;&lt;rt rt-lvl="1"&gt;one&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;
+... etc ...
+&lt;ruby&gt;
+  009&lt;rp&gt;(&lt;/rp&gt;&lt;rt rt-lvl="9"&gt;nine&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;</pre>
+
+<p>Now we will apply the <b>furigana</b> jQuery library with the following settings:</p>
+<pre>$(".rubyLevelDemo").furigana({
+  hide_from: 2,
+  hide_before: 4,
+  obscure_from: 4,
+  obscure_before: 6,
+  replace_from: 7,
+  replace_before: 9,
+});</pre>
+<p>Which results in the following text:</p>
+			<p class="rubyLevelDemo demo">
+                <ruby>
+                    000<rp>(</rp><rt rt-lvl="0">zero</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    001<rp>(</rp><rt rt-lvl="1">one</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    002<rp>(</rp><rt rt-lvl="2">two</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    003<rp>(</rp><rt rt-lvl="3">three</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    004<rp>(</rp><rt rt-lvl="4">four</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    005<rp>(</rp><rt rt-lvl="5">five</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    006<rp>(</rp><rt rt-lvl="6">six</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    007<rp>(</rp><rt rt-lvl="7">seven</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    008<rp>(</rp><rt rt-lvl="8">eight</rt><rp>)</rp>
+                </ruby>
+                <ruby>
+                    009<rp>(</rp><rt rt-lvl="9">nine</rt><rp>)</rp>
+                </ruby>
+            </p>
+            <p>
+            	So you can:
+            	<ul>
+            		<li>format the ruby text</li>
+            		<li>hide the ruby text</li>
+            		<li>obscure the ruby text (and clicking on it should reveal it)</li>
+            		<li>and swap the main text and the ruby text around</li>
+            		<li>clicking on the main text should show you the text in a magnified popup.</li>
+            	</ul> 
+            	and it is controlled by "from" and "before" numbers (and the usual jQuery selectors).
+            </p>
         </section>
         <section>
-                <h1>Text Examples</h1>
-                <p>The example texts are <a href="./examples.html">here</a></p>
-                <h1>CSS Examples</h1>
-                <p>The CSS styling examples are <a href="./styling.html">here</a></p>
+            <h1>Settings</h1>
+            <p>These are the settings (and their default values)</p>
+            <table class="api">
+            	<thead>
+            		<tr><th>setting name</th><th>default value</th></tr>
+            	</thead>
+            	<tbody>
+            	  <tr><td>color</td><td>"inherit"</td></tr>
+            	  <tr><td>backgroundColor</td><td>"inherit"</td></tr>
+            	  <tr><td>hide_before</td><td><code>null</code></td></tr>
+            	  <tr><td>hide_from</td><td><code>null</code></td></tr>
+            	  <tr><td>obscure_backgroundColor</td><td>"silver"</td></tr>
+            	  <tr><td>obscure_before</td><td><code>null</code></td></tr>
+            	  <tr><td>obscure_color</td><td>"silver"</td></tr>
+            	  <tr><td>obscure_cursor</td><td>"pointer"</td></tr>
+            	  <tr><td>obscure_from</td><td><code>null</code></td></tr>
+            	  <tr><td>magnify_backgroundColor</td><td>"cornsilk"</td></tr>
+            	  <tr><td>magnify_before</td><td>10</td></tr>
+            	  <tr><td>magnify_borderStyle</td><td>"1px dashed blue"</td></tr>
+            	  <tr><td>magnify_close_color</td><td>"red"</td></tr>
+            	  <tr><td>magnify_close_text</td><td>"[&bull;]"</td></tr>
+            	  <tr><td>magnify_from</td><td>0</td></tr>
+            	  <tr><td>number_list</td><td>[0,1,2,3,4,5,6,7,8,9]</td></tr>
+            	  <tr><td>replace_before</td><td><code>null</code></td></tr>
+            	  <tr><td>replace_from</td><td><code>null</code></td></tr>
+            	</tbody>
+            </table>
+            <section>
+            <h1>{from ... before} Ranges</h1>
+            <p>Given the default number range of <code>[0,1,2,3,4,5,6,7,8,9]</code> the following logic applies:</p>
+            <table class="ranges">
+	            <tr><th>from</th><th>before</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+                <tr><td><code>null</code></td><td><code>null</code></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            	<tr><td>0</td><td><code>null</code></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+            	<tr><td>4</td><td><code>null</code></td><td></td><td></td><td></td><td></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+            	<tr><td><code>null</code></td><td>10</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+            	<tr><td><code>null</code></td><td>6</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td></td><td></td><td></td><td></td></tr>
+            	<tr><td>3</td><td>7</td><td></td><td></td><td></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td></td><td></td><td></td></tr>
+            	<tr><td>7</td><td>3</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td></td><td></td><td></td><td></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+            	<tr><td>5</td><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </table>
+            	<section>
+                	<h1>Unit Tests</h1>
+                	<p>The qunit tests for the from/before logic are <a href="./qunit.html">here</a></p>
+        		</section>
+            </section>
         </section>
         <section>
             <h1>References</h1>
@@ -200,9 +201,6 @@
                 <li>Japanses Tongue-twisters: <a href="https://www.sljfaq.org/afaq/hayakuchi-kotoba.html">https://www.sljfaq.org/afaq/hayakuchi-kotoba.html</a></li>
             </ul>
         </section>
-        <section>
-                <h1>Unit Tests</h1>
-                <p>The qunit tests are <a href="./qunit.html">here</a></p>
-        </section>
+        
     </body>
 </html> 
